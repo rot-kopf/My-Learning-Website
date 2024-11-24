@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Time & Date
+        </title>
+    </head>
+    <body>
+        <table align="center">
+            <thead>
+                <tr>
+                    <td>
+                        <h1 style="text-align:center">
+                            Today's Date
+                        </h1>
+                    </td>
+                    <td>
+                        <h1 style="text-align:center">
+                            Time (EST)
+                        </h1>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td height="100" width="500">
+                        <h2 id="date" style="text-align: center;font-family: Helvetica, Arial, sans-serif;"></h2>
+                        <script>
+                            n =  new Date();
+                            y = n.getFullYear();
+                            m = n.getMonth() + 1;
+                            d = n.getDate();
+                            document.getElementById("date").innerHTML = m + "/" + d + "/" + y;        
+                        </script>
+                    </td>
+                    <td height="100" width="500">
+                        <h2 style="text-align:center" id="time"></h2>
+                        <script>
+                            var d = new Date().toLocaleTimeString();
+                            document.getElementById("time").innerHTML = d;
+                        </script>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+
+</html>
